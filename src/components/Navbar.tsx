@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto flex h-24 items-center justify-between px-6">
         <a href="#" className="flex items-center gap-2">
-          <img src={logoFull} alt="RaceCode Solutions" className="h-14" />
+          <img src={logoFull} alt="RaceCode Solutions" className="h-28" />
         </a>
 
         {/* Desktop */}
