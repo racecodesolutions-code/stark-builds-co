@@ -35,12 +35,9 @@ const ContactSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <p className="font-mono text-sm text-primary mb-4 tracking-wider">
-              {"// Contact"}
-            </p>
+            <p className="font-mono text-sm text-primary mb-4 tracking-wider">{"// Contact"}</p>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Let's build something{" "}
-              <span className="text-gradient-red">fast & powerful</span>
+              Let's build something <span className="text-gradient-red">fast & powerful</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Tell us about your project and we'll get back to you within 24 hours.
@@ -48,12 +45,10 @@ const ContactSection = () => {
 
             <div className="space-y-4 font-mono text-sm text-muted-foreground">
               <p>
-                <span className="text-primary">email:</span>{" "}
-                hello@racecode.dev
+                <span className="text-primary">email:</span> racecode.solutions@gmail.com
               </p>
               <p>
-                <span className="text-primary">location:</span>{" "}
-                Remote / Worldwide
+                <span className="text-primary">location:</span> Remote / Worldwide
               </p>
             </div>
           </motion.div>
@@ -67,9 +62,7 @@ const ContactSection = () => {
             className="space-y-5"
           >
             <div>
-              <label className="block text-sm font-mono text-muted-foreground mb-2">
-                Name
-              </label>
+              <label className="block text-sm font-mono text-muted-foreground mb-2">Name</label>
               <input
                 type="text"
                 required
@@ -82,9 +75,7 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-mono text-muted-foreground mb-2">
-                Email
-              </label>
+              <label className="block text-sm font-mono text-muted-foreground mb-2">Email</label>
               <input
                 type="email"
                 required
@@ -97,9 +88,7 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-mono text-muted-foreground mb-2">
-                Project Type
-              </label>
+              <label className="block text-sm font-mono text-muted-foreground mb-2">Project Type</label>
               <div className="flex flex-wrap gap-2">
                 {projectTypes.map((type) => (
                   <button
@@ -119,9 +108,7 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-mono text-muted-foreground mb-2">
-                Message
-              </label>
+              <label className="block text-sm font-mono text-muted-foreground mb-2">Message</label>
               <textarea
                 required
                 maxLength={1000}
@@ -138,11 +125,7 @@ const ContactSection = () => {
               disabled={formState === "sending"}
               className="w-full bg-primary text-primary-foreground py-3.5 font-semibold rounded hover:bg-primary/90 transition-colors text-sm disabled:opacity-60"
             >
-              {formState === "sending"
-                ? "Sending..."
-                : formState === "sent"
-                ? "✓ Message Sent!"
-                : "Send Request"}
+              {formState === "sending" ? "Sending..." : formState === "sent" ? "✓ Message Sent!" : "Send Request"}
             </button>
           </motion.form>
         </div>
