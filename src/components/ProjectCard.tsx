@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface ProjectCardProps {
   title: string;
@@ -8,6 +9,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ title, category, image, index }: ProjectCardProps) => {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -17,7 +20,11 @@ const ProjectCard = ({ title, category, image, index }: ProjectCardProps) => {
       className="group relative overflow-hidden rounded border border-border bg-surface cursor-pointer"
     >
       {/* Image */}
-      <div className="aspect-[16/10] overflow-hidden">
+      <div
+        className="aspect-[16/10] overflow-hidden relative"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
         <img
           src={image}
           alt={title}
@@ -26,19 +33,20 @@ const ProjectCard = ({ title, category, image, index }: ProjectCardProps) => {
         />
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
+        {/* Title tooltip on hover */}
+        {hovered && (
+          <div className="absolute bottom-3 left-3 bg-background/90 backdrop-blur-sm border border-border px-3 py-1.5 rounded text-sm font-semibold text-foreground shadow-md animate-in fade-in-0 zoom-in-95 duration-200">
+            {title}
+          </div>
+        )}
       </div>
 
       {/* Info */}
-      <div className="p-5 flex items-center justify-between">
-        <div>
-          <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
-            {title}
-          </h3>
-          <p className="text-xs font-mono text-muted-foreground mt-1">{category}</p>
-        </div>
-        <span className="text-muted-foreground group-hover:text-primary transition-colors font-mono text-lg">
-          →
-        </span>
+      <div className="p-5">
+        <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+          {title}
+        </h3>
+        <p className="text-xs font-mono text-muted-foreground mt-1">{category}</p>
       </div>
 
       {/* Bottom accent */}
