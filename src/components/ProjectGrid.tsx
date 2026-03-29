@@ -9,6 +9,7 @@ import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
+import project7 from "@/assets/project-7.jpg";
 
 const allProjects = [
   { title: "Analytics Dashboard", category: "Web App", image: project1 },
@@ -17,6 +18,7 @@ const allProjects = [
   { title: "FinTech Mobile", category: "Web App", image: project4 },
   { title: "Property Platform", category: "Web App", image: project5 },
   { title: "FitTrack Pro", category: "Web App", image: project6 },
+  { title: "Architectural Bureau", category: "Landing Page", image: project7 },
 ];
 
 const ProjectGrid = () => {
