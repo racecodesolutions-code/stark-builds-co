@@ -43,10 +43,7 @@ const ProjectCard = ({ title, category, image, index }: ProjectCardProps) => {
 
       {/* Info */}
       <div className="p-5">
-        <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
-          {title}
-        </h3>
-        <p className="text-xs font-mono text-muted-foreground mt-1">{category}</p>
+        <p className="text-xs font-mono text-muted-foreground">{category}</p>
       </div>
 
       {/* Bottom accent */}
