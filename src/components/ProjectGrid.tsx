@@ -13,6 +13,7 @@ import project7 from "@/assets/project-7.jpg";
 import project8 from "@/assets/project-8.jpg";
 import project9 from "@/assets/project-9.jpg";
 import project10 from "@/assets/project-10.jpg";
+import project11 from "@/assets/project-11.jpg";
 
 const allProjects = [
   { title: "Analytics Dashboard", category: "Web App", image: project1 },
@@ -25,6 +26,7 @@ const allProjects = [
   { title: "News Portal", category: "Web App", image: project8 },
   { title: "Restaurant Website", category: "Landing Page", image: project9 },
   { title: "Design Studio", category: "Landing Page", image: project10 },
+  { title: "Design Studios", category: "Landing Page", image: project11 },
 ];
 
 const ProjectGrid = () => {
