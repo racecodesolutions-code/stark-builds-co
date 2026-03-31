@@ -51,7 +51,7 @@ const ProjectGrid = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {visible.map((project, i) => (
-            <ProjectCard key={project.title} {...project} index={i} neutralBg={i >= 6} />
+            <ProjectCard key={project.title} {...project} index={i} neutralBg />
           ))}
         </div>
 
