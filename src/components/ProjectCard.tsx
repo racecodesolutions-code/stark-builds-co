@@ -22,14 +22,14 @@ const ProjectCard = ({ title, category, image, index, neutralBg }: ProjectCardPr
     >
       {/* Image */}
       <div
-        className="aspect-[16/10] overflow-hidden relative"
+        className={`aspect-[16/10] overflow-hidden relative ${neutralBg ? 'bg-muted' : ''}`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${neutralBg ? 'object-contain p-4' : 'object-cover'}`}
           loading="lazy"
         />
         {/* Hover overlay */}
