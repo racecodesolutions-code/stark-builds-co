@@ -22,6 +22,7 @@ const allProjects = [
   { title: "FitTrack Pro", category: "Web App", image: project6 },
   { title: "Architectural Bureau", category: "Landing Page", image: project7 },
   { title: "News Portal", category: "Web App", image: project8 },
+  { title: "Restaurant Website", category: "Landing Page", image: project9 },
 ];
 
 const ProjectGrid = () => {
