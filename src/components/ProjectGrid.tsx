@@ -13,6 +13,7 @@ import project7 from "@/assets/project-7.jpg";
 import project8 from "@/assets/project-8.jpg";
 import project9 from "@/assets/project-9.jpg";
 import project10 from "@/assets/project-10.jpg";
+import project11 from "@/assets/project-11.jpg";
 
 const allProjects = [
   { title: "Analytics Dashboard", category: "Web App", image: project1 },
