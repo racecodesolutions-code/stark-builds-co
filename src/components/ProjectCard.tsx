@@ -9,7 +9,7 @@ interface ProjectCardProps {
   neutralBg?: boolean;
 }
 
-const ProjectCard = ({ title, category, image, index }: ProjectCardProps) => {
+const ProjectCard = ({ title, category, image, index, neutralBg }: ProjectCardProps) => {
   const [hovered, setHovered] = useState(false);
 
   return (
