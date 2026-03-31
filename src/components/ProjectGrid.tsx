@@ -17,12 +17,6 @@ import project11 from "@/assets/project-11.jpg";
 import project12 from "@/assets/project-12.jpg";
 
 const allProjects = [
-  { title: "Analytics Dashboard", category: "Web App", image: project1 },
-  { title: "Fashion Store", category: "E-commerce", image: project2 },
-  { title: "Startup Launch", category: "Landing Page", image: project3 },
-  { title: "FinTech Mobile", category: "Web App", image: project4 },
-  { title: "Property Platform", category: "Web App", image: project5 },
-  { title: "FitTrack Pro", category: "Web App", image: project6 },
   { title: "Architectural Bureau", category: "Landing Page", image: project7 },
   { title: "News Portal", category: "Web App", image: project8 },
   { title: "Restaurant Website", category: "Landing Page", image: project9 },
@@ -57,7 +51,7 @@ const ProjectGrid = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {visible.map((project, i) => (
-            <ProjectCard key={project.title} {...project} index={i} neutralBg={i >= 6} />
+            <ProjectCard key={project.title} {...project} index={i} neutralBg />
           ))}
         </div>
 
