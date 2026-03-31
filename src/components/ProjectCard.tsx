@@ -6,9 +6,10 @@ interface ProjectCardProps {
   category: string;
   image: string;
   index: number;
+  neutralBg?: boolean;
 }
 
-const ProjectCard = ({ title, category, image, index }: ProjectCardProps) => {
+const ProjectCard = ({ title, category, image, index, neutralBg }: ProjectCardProps) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -21,14 +22,14 @@ const ProjectCard = ({ title, category, image, index }: ProjectCardProps) => {
     >
       {/* Image */}
       <div
-        className="aspect-[16/10] overflow-hidden relative"
+        className={`aspect-[16/10] overflow-hidden relative ${neutralBg ? 'bg-muted' : ''}`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${neutralBg ? 'object-contain p-4' : 'object-cover'}`}
           loading="lazy"
         />
         {/* Hover overlay */}
