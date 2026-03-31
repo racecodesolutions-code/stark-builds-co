@@ -11,6 +11,7 @@ import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
 import project7 from "@/assets/project-7.jpg";
 import project8 from "@/assets/project-8.jpg";
+import project9 from "@/assets/project-9.jpg";
 
 const allProjects = [
   { title: "Analytics Dashboard", category: "Web App", image: project1 },
