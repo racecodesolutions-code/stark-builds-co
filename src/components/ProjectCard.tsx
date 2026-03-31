@@ -6,6 +6,7 @@ interface ProjectCardProps {
   category: string;
   image: string;
   index: number;
+  neutralBg?: boolean;
 }
 
 const ProjectCard = ({ title, category, image, index }: ProjectCardProps) => {
