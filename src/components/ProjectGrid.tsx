@@ -26,6 +26,7 @@ const allProjects = [
   { title: "News Portal", category: "Web App", image: project8 },
   { title: "Restaurant Website", category: "Landing Page", image: project9 },
   { title: "Design Studio", category: "Landing Page", image: project10 },
+  { title: "Design Studios", category: "Landing Page", image: project11 },
 ];
 
 const ProjectGrid = () => {
