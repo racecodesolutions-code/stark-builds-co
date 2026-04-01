@@ -64,6 +64,11 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Overpass', system-ui, sans-serif;
+    font-weight: 600;
+  }
+
   ::selection {
     background: hsl(0 78% 50% / 0.3);
     color: hsl(0 0% 100%);
