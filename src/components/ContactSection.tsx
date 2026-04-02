@@ -15,16 +15,34 @@ const ContactSection = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormState("sending");
-    // Simulate send
-    setTimeout(() => {
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setFormState("sending");
+
+  try {
+    const res = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
       setFormState("sent");
       setForm({ name: "", email: "", projectType: "", message: "" });
-    }, 1500);
-  };
-
+    } else {
+      setFormState("idle");
+      alert("Failed to send message");
+    }
+  } catch (error) {
+    console.error(error);
+    setFormState("idle");
+    alert("Server error");
+  }
+};
   return (
     <section id="contact" className="py-32 border-t border-border">
       <div className="container mx-auto px-6" ref={ref}>
