@@ -20,7 +20,7 @@ const ContactSection = () => {
   setFormState("sending");
 
   try {
-    const res = await fetch("http://204.168.136.136:5000/api/contact", {
+    const res = await fetch("http://204.168.136.136:5000/api/contact", { //http://204.168.136.136:5000/api/contact
       method: "POST",
       headers: {
         "Content-Type": "application/json",
